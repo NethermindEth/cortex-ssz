@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Product>Cortex Eth2.0 blockchain</Product>
     <Authors>sgryphon</Authors>
-    <Copyright>Gryphon Technology</Copyright>
+    <Copyright>Copyright © Gryphon Technology Pty Ltd</Copyright>
     <Version>0.0.1</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
@@ -16,7 +16,8 @@ Does not yet support uint128, uint256, or union types. Does not yet support dese
     </Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MS-RL</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/sgryphon/cortex-ssz</RepositoryUrl>
+    <RepositoryUrl>projectUrl=https://github.com/sgryphon/cortex-ssz</RepositoryUrl>
+    <PackageTags>SSZ;SimpleSerialize;"Eth 2.0";Merkleization</PackageTags>
   </PropertyGroup>
 
 </Project>
