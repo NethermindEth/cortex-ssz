@@ -3,10 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Product>Cortex Eth2.0 blockchain</Product>
-    <Authors>Gryphon Technology</Authors>
+    <Authors>sgryphon</Authors>
+    <Copyright>Gryphon Technology</Copyright>
     <Version>0.0.1</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <Description>An implementation of the ETH2.0 Simple Serialize (SSZ) specification, for .NET Core.
+
+Supports serialization and Merkleization for uint8 (byte), uint16 (ushort), uint32 (uint), uint64 (ulong), boolean, containers, vectors, lits, bitvector, and bitlist.
+
+Does not yet support uint128, uint256, or union types. Does not yet support deserialization. No direct support for self-signed containers, although you can easily get the signing root.
+    </Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MS-RL</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/sgryphon/cortex-ssz</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
