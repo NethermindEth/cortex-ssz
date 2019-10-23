@@ -16,7 +16,7 @@ Does not yet support uint128, uint256, or union types. Does not yet support dese
     </Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MS-RL</PackageLicenseExpression>
-    <RepositoryUrl>projectUrl=https://github.com/sgryphon/cortex-ssz</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/sgryphon/cortex-ssz</PackageProjectUrl>
     <PackageTags>SSZ;SimpleSerialize;"Eth 2.0";Merkleization</PackageTags>
   </PropertyGroup>
 
