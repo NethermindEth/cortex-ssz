@@ -49,13 +49,9 @@ src\Cortex.SimpleSerialize\bin\Release\Cortex.SimpleSerialize.<ver>.nupkg'.
 
 Pull requests welcome, but will need to align with the project direction to be accepted.
 
-## Contributions
-
-Donations (ETH) can be sent to 0x1a474C09EE765C17fbf35B8B0fcb28a2B0E6e6db
-
 ## License
 
-Copyright (C) 2019 Gryphon Technology Pty Ltd
+Copyright (C) 2019 Demerzel Solutions Limited
 
 This library is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
