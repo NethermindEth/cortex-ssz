@@ -187,6 +187,11 @@ namespace Cortex.SimpleSerialize
                 throw new ArgumentOutOfRangeException("chunks.Length", chunks.Length, $"Chunks length exceeded padded length limit {paddedLength} bytes.");
             }
 
+            if ((ulong)chunks.Length == 0)
+            {
+                chunks = new byte[32];
+            }
+
             if (paddedLength <= BytesPerChunk)
             {
                 return chunks;
