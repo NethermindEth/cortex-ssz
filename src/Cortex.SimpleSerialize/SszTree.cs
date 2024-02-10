@@ -232,10 +232,12 @@ namespace Cortex.SimpleSerialize
                 {
                     input = data.Slice(dataIndex, BytesPerChunk << 1);
                 }
-                var success = _hashAlgorithm.TryComputeHash(input, hashes.Slice(index, BytesPerChunk), out var bytesWritten);
-                if (!success || bytesWritten != BytesPerChunk)
-                {
-                    throw new InvalidOperationException("Error generating hash value.");
+                lock (_hashAlgorithm) {
+                    var success = _hashAlgorithm.TryComputeHash(input, hashes.Slice(index, BytesPerChunk), out var bytesWritten);
+                    if (!success || bytesWritten != BytesPerChunk)
+                    {
+                        throw new InvalidOperationException("Error generating hash value.");
+                    }
                 }
             }
             return hashes;
@@ -252,10 +254,12 @@ namespace Cortex.SimpleSerialize
             root.CopyTo(mixed);
             serializedLength.CopyTo(mixed.Slice(BytesPerChunk));
             var hash = new Span<byte>(new byte[BytesPerChunk]);
-            var success = _hashAlgorithm.TryComputeHash(mixed, hash, out var bytesWritten);
-            if (!success || bytesWritten != BytesPerChunk)
-            {
-                throw new InvalidOperationException("Error generating hash value.");
+            lock (_hashAlgorithm) {
+                var success = _hashAlgorithm.TryComputeHash(mixed, hash, out var bytesWritten);
+                if (!success || bytesWritten != BytesPerChunk)
+                {
+                    throw new InvalidOperationException("Error generating hash value.");
+                }
             }
             return hash;
         }
